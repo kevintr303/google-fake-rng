@@ -1,0 +1,455 @@
+/* Global Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    background: #101217;
+    color: #e8eaed;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+.google-header {
+    background: #101217;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.google-logo {
+    width: 90px;
+    margin: 14px 45px 0 25px;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 25px 0 20px;
+}
+
+.search-bar-container {
+    display: flex;
+    align-items: center;
+    width: 775px;
+    background-color: #3f4454;
+    border-radius: 24px;
+    padding: 13px 15px;
+}
+
+.google-search-bar {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #e8eaed;
+    font-size: 16px;
+    text-align: left;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.apps-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+/* Header Bottom */
+.header-bottom {
+    padding: 10px 0;
+}
+
+.header-bottom-container {
+    margin-left: 160px;
+    width: 775px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-filters {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-filters span {
+    cursor: pointer;
+    color: #bdc1c6;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.search-filters span:first-child::after {
+    content: "";
+    display: block;
+    width: 220%;
+    height: 3px;
+    background: #e8e8e8;
+    position: absolute;
+    bottom: -11px;
+    left: -9px;
+}
+
+.more-filter {
+    display: flex;
+    margin-left: 16px;
+    align-items: center;
+}
+
+.tools-filter {
+    font-size: 14px;
+    cursor: pointer;
+    color: #bdc1c6;
+    margin-bottom: 6px;
+}
+
+/* Content Layout */
+.content-wrapper {
+    max-width: 980px;
+    margin: 0 0 20px 150px;
+    padding: 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 1040px;
+    margin: 0 0 20px 0;
+}
+
+/* Left Column */
+.left-column {
+    width: 640px;
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+/* RNG Widget */
+.rng-widget {
+    position: relative;
+    background: #101217;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.rng-widget-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.result-container {
+    flex: 1;
+    text-align: left;
+}
+
+.widget-result {
+    font-size: 48px;
+    margin: 20px 0;
+    padding: 10px;
+    background: #101217;
+    border-radius: 5px;
+}
+
+.widget-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #bdc1c6;
+}
+
+.input-group input {
+    width: 150px;
+    padding: 8px;
+    text-align: left;
+    background: #202124;
+    color: #e8eaed;
+    border: none;
+    border-bottom: 3px solid #5f6369;
+    outline: none;
+    font-size: 14px;
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.input-group input:focus {
+    border-bottom-color: #8ab4f8;
+}
+
+.generate-button {
+    background: #8ab4f8;
+    color: #101217;
+    border: none;
+    padding: 12px 0;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.generate-button:hover {
+    background: #aecbfa;
+}
+
+.arrow-container {
+    text-align: center;
+    margin-top: 8px;
+}
+
+.arrow-container img {
+    width: 20px;
+    height: auto;
+}
+
+.share-icon {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Widget Feedback */
+.widget-feedback {
+    font-size: 12px;
+    margin: 5px 10px 45px;
+    color: #bdc1c6;
+    text-align: right;
+}
+
+/* Organic Search Results */
+.organic-results {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.search-result {
+    margin-bottom: 25px;
+}
+
+.search-result a {
+    color: #8ab4f8;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.fake-visited {
+    color: #d19efa !important;
+}
+
+.search-result p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #bdc1c6;
+}
+
+/* Search Result Styling */
+.result-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.result-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #202124;
+}
+
+.result-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.result-subinfo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.result-subinfo {
+    font-size: 12px;
+    color: #9aa0a6;
+}
+
+.more-vert-icon {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.more-vert-icon:hover {
+    opacity: 1;
+}
+
+/* Wikipedia-style Section */
+.knowledge-panel {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    flex-shrink: 0;
+    width: 390px;
+}
+
+.wiki-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wiki-title {
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.wiki-more {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.wiki-images {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    height: 200px;
+    width: 390px;
+}
+
+.wiki-img-left {
+    width: 50%;
+    border-right: 2px solid #101217;
+}
+
+.wiki-img-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wiki-img-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wiki-img-right img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.wiki-img-right img:first-child {
+    border-bottom: 2px solid #101217;
+}
+
+.wiki-description {
+    background: #303134;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    width: 370px;
+}
+
+.wiki-description a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+.wiki-feedback {
+    font-size: 12px;
+    margin-top: 40px;
+    color: #bdc1c6;
+    text-align: right;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 800px) {
+    .header-bottom-container {
+        margin-left: 25px;
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .knowledge-panel {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+
+    .organic-results {
+        margin-left: 25px;
+    }
+
+    .left-column {
+        width: auto;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rigged RNG Setup</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        .container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 30px;
+            background: #202124;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .container h1 {
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #bdc1c6;
+        }
+
+        .container label {
+            display: block;
+            margin: 0 0 5px;
+            font-size: 14px;
+            color: #bdc1c6;
+            text-align: left;
+        }
+
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #303134;
+            color: #e8eaed;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .container button {
+            width: 100%;
+            padding: 12px;
+            background: #8ab4f8;
+            color: #101217;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s ease-in-out;
+        }
+
+        .container button:hover {
+            background: #aecbfa;
+        }
+
+        #mode-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        #mode-options label {
+            font-size: 14px;
+            color: #bdc1c6;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rigged RNG Generator 🎲</h1>
+        <p>Set your "random" number(s) and trick your friends!</p>
+
+        <label for="min">Min Value:</label>
+        <input type="number" id="min" value="1" />
+
+        <label for="max">Max Value:</label>
+        <input type="number" id="max" value="10" />
+
+        <label for="rigged">Rigged Numbers (e.g., 1,2-6,9):</label>
+        <input type="text" id="rigged" placeholder="e.g., 1,2-6,9" />
+
+        <label>Rigging Mode:</label>
+        <div id="mode-options">
+            <label>
+                <input type="radio" name="mode" value="random" checked> Random
+            </label>
+            <label>
+                <input type="radio" name="mode" value="sequential"> Sequential
+            </label>
+        </div>
+
+        <button onclick="generateFakeRNG()">Generate Fake RNG</button>
+    </div>
+
+    <script>
+        function generateFakeRNG() {
+            const min = document.getElementById("min").value;
+            const max = document.getElementById("max").value;
+            const rigged = document.getElementById("rigged").value;
+            const modeEl = document.querySelector('input[name="mode"]:checked');
+            const mode = modeEl ? modeEl.value : "random";
+            window.location.href = `rng.html?min=${min}&max=${max}&rigged=${encodeURIComponent(rigged)}&mode=${mode}`;
+        }
+    </script>
+</body>
+
+</html>

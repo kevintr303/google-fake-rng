@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rng - Google Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" type="image/png" href="favicon/google-favicon.png" />
+</head>
+
+<body>
+    <header class="google-header">
+        <div class="header-top">
+            <div class="header-left">
+                <img src="assets/images/google-logo.png" alt="Google" class="google-logo" />
+                <div class="search-bar-wrapper">
+                    <div class="search-bar-container">
+                        <input type="text" class="google-search-bar" value="rng" readonly />
+                        <img src="assets/images/search.png" alt="Search" class="search-icon" />
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="assets/images/apps.png" alt="Apps" class="apps-icon" />
+                <img src="assets/images/profile.png" alt="Profile" class="profile-pic" />
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-bottom-container">
+                <div class="search-filters">
+                    <span>All</span>
+                    <span>Images</span>
+                    <span>Videos</span>
+                    <span>Shopping</span>
+                    <span>News</span>
+                    <span>Forums</span>
+                    <span>Web</span>
+                    <span class="more-filter">⋮ More</span>
+                </div>
+                <div class="tools-filter">Tools</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <main class="main-content">
+            <div class="left-column">
+                <div class="rng-widget-container">
+                    <div class="rng-widget">
+                        <img src="assets/images/share.png" alt="Share" class="share-icon" />
+                        <div class="rng-widget-top">
+                            <div class="result-container">
+                                <div class="widget-result" id="result">-</div>
+                            </div>
+                            <div class="widget-inputs">
+                                <div class="input-group">
+                                    <label for="min-display">Min</label>
+                                    <input id="min-display" />
+                                </div>
+                                <div class="input-group">
+                                    <label for="max-display">Max</label>
+                                    <input id="max-display" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- The button will generate the rigged number based on the mode -->
+                        <button class="generate-button" onclick="generateRiggedNumber()">GENERATE</button>
+                        <div class="arrow-container">
+                            <img src="assets/images/arrow-down.png" alt="Arrow Down" />
+                        </div>
+                    </div>
+                    <div class="widget-feedback">Feedback</div>
+                </div>
+
+                <section class="organic-results">
+                    <div class="search-result">
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <img src="assets/images/random-org.png" alt="Random.org" />
+                            </div>
+                            <div class="result-info">
+                                <span class="result-website">Random.org</span>
+                                <div class="result-subinfo-container">
+                                    <span class="result-subinfo">https://www.random.org</span>
+                                    <img src="assets/images/more-vert.png" alt="Options" class="more-vert-icon" />
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="fake-visited">RANDOM.ORG - True Random Number Service</a>
+                        <p>
+                            <b>RANDOM.ORG</b> offers true random numbers to anyone on the Internet. The randomness comes
+                            from atmospheric noise, which for many purposes is better than the pseudo ...
+                        </p>
+                    </div>
+
+                    <div class="search-result">
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <img src="assets/images/calculator-net.png" alt="Calculator.net" />
+                            </div>
+                            <div class="result-info">
+                                <span class="result-website">Calculator.net</span>
+                                <div class="result-subinfo-container">
+                                    <span class="result-subinfo">https://www.calculator.net › math</span>
+                                    <img src="assets/images/more-vert.png" alt="Options" class="more-vert-icon" />
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">Random Number Generator</a>
+                        <p>
+                            This version of the generator can create one or many random integers or decimals. It can
+                            deal with very large numbers with up to 999 digits of precision.
+                        </p>
+                    </div>
+
+                    <div class="search-result">
+                        <div class="result-header">
+                            <div class="result-icon">
+                                <img src="assets/images/reddit-com.png" alt="Reddit" />
+                            </div>
+                            <div class="result-info">
+                                <span class="result-website">Reddit · r/gaming</span>
+                                <div class="result-subinfo-container">
+                                    <span class="result-subinfo">10+ comments · 3 years ago</span>
+                                    <img src="assets/images/more-vert.png" alt="Options" class="more-vert-icon" />
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">Why do people use the term RNG instead of just the word "random"?</a>
+                        <p>
+                            Because RNGs are not actually random, most games have them weighted in some way through the
+                            <b>Random Number Generator</b> so your outcomes are not ...
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="knowledge-panel">
+                <div class="wiki-content">
+                    <div class="wiki-header">
+                        <div class="wiki-title">
+                            Random number<br />generation
+                        </div>
+                        <img src="assets/images/more-vert.png" alt="More Options" class="wiki-more" />
+                    </div>
+                    <div class="wiki-images">
+                        <div class="wiki-img-left">
+                            <img src="assets/images/rng1.png" alt="RNG 1" />
+                        </div>
+                        <div class="wiki-img-right">
+                            <img src="assets/images/rng2.png" alt="RNG 2" />
+                            <img src="assets/images/rng3.png" alt="RNG 3" />
+                        </div>
+                    </div>
+                    <div class="wiki-description">
+                        Random number generation is a process by which, often by means of a random number generator, a
+                        sequence of numbers or symbols is generated that cannot be reasonably predicted better than by
+                        random chance.
+                        <a href="#">Wikipedia ›</a>
+                    </div>
+                </div>
+                <div class="wiki-feedback">Feedback</div>
+            </aside>
+        </main>
+    </div>
+
+    <script>
+        // Helper to get query parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Parse a rigged numbers string (e.g., "1,2-6,9") into an array of numbers
+        function parseRiggedNumbers(input) {
+            const numbers = new Set();
+            if (!input) return [];
+            input.split(",").forEach((part) => {
+                if (part.includes("-")) {
+                    const [start, end] = part.split("-").map(Number);
+                    for (let i = start; i <= end; i++) {
+                        numbers.add(i);
+                    }
+                } else {
+                    numbers.add(Number(part));
+                }
+            });
+            return Array.from(numbers);
+        }
+
+        let sequentialIndex = 0;
+        const mode = getQueryParam("mode") || "random";
+
+        // Animate the result by "rolling" the displayed number from its current value to the target.
+        function rollToNumber(target, duration = 500) {
+            const display = document.getElementById("result");
+            // Get the current number (if not a number, default to 0)
+            let current = parseInt(display.innerText, 10);
+            if (isNaN(current)) current = 0;
+            const startTime = performance.now();
+
+            function animate(now) {
+                const elapsed = now - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                // Calculate the interpolated value
+                const value = current + (target - current) * progress;
+                display.innerText = Math.round(value);
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            }
+            requestAnimationFrame(animate);
+        }
+
+        // When the page loads, display a genuine random number between min and max.
+        function generateRandomNumber() {
+            const minVal = parseInt(document.getElementById("min-display").value, 10) || 1;
+            const maxVal = parseInt(document.getElementById("max-display").value, 10) || 10;
+            const randomNumber = Math.floor(Math.random() * (maxVal - minVal + 1)) + minVal;
+            document.getElementById("result").innerText = randomNumber;
+        }
+
+        // Generate a rigged number (either randomly chosen from the list or sequentially cycling through it)
+        function generateRiggedNumber() {
+            const riggedInput = getQueryParam("rigged");
+            const riggedNumbers = parseRiggedNumbers(riggedInput);
+            if (riggedNumbers.length === 0) {
+                document.getElementById("result").innerText = "-";
+                return;
+            }
+            let target;
+            if (mode === "sequential") {
+                target = riggedNumbers[sequentialIndex];
+                sequentialIndex = (sequentialIndex + 1) % riggedNumbers.length;
+            } else {
+                target = riggedNumbers[Math.floor(Math.random() * riggedNumbers.length)];
+            }
+            // Instead of instantly setting the number, animate it.
+            rollToNumber(target);
+        }
+
+        // Set the displayed min and max values from the query parameters.
+        document.getElementById("min-display").value = getQueryParam("min") || 1;
+        document.getElementById("max-display").value = getQueryParam("max") || 10;
+
+        // On load, show a genuine random number.
+        generateRandomNumber();
+    </script>
+</body>
+
+</html>
