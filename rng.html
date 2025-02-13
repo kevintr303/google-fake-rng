@@ -193,12 +193,16 @@
         let sequentialIndex = 0;
         const mode = getQueryParam("mode") || "random";
 
+        const MAX_SPIN_TIME_PER_NUMBER = 10;
+
         // Animate the result by "rolling" the displayed number from its current value to the target.
         function rollToNumber(target, duration = 500) {
             const display = document.getElementById("result");
             // Get the current number (if not a number, default to 0)
             let current = parseInt(display.innerText, 10);
             if (isNaN(current)) current = 0;
+            const numberDifference = Math.abs(target - current);
+            duration = Math.min(duration, numberDifference * 50);
             const startTime = performance.now();
 
             function animate(now) {
